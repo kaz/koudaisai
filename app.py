@@ -47,7 +47,7 @@ def show(token):
 	if token not in tokens:
 		return flask.render_template("ng.html")
 	
-	tokens.delete(token)
+	tokens.remove(token)
 	return flask.render_template("ok.html")
 
 if __name__ == "__main__":
