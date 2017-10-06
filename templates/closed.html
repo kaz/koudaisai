@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>謎</title>
+	<style>
+		@font-face {
+			font-family: ArmedLemon;
+			src: url("/static/ArmedLemon.TTF") format("truetype");
+		}
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			font-family: ArmedLemon;
+			font-size: 28px;
+			color: #604000;
+			text-shadow: 0 0 3px #604000;
+			background-color: #F7EFBC;
+		}
+		main {
+			margin: 184px auto;
+			padding: 48px;
+			padding-left: 12px;
+			width: 540px;
+			height: 400px;
+			background-image: url("/static/closed.png");
+			background-size: cover;
+			text-align: center;
+			transition: all 2s;
+			opacity: 0;
+		}
+		table {
+			margin: 3em auto;
+			border-collapse: collapse;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>チラシの裏</h1>
+		<p>
+			このページはもう読めないよ！
+		</p>			
+	</main>
+	<script>
+		window.onload = function(){
+			document.querySelector("main").style.opacity = 1;
+		};
+	</script>
+</body>
+</html>

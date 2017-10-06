@@ -32,7 +32,7 @@ def get_qr():
 	for y in range(raw.size[1]):
 		for x in range(raw.size[0]):
 			if raw.getpixel((x, y)) == 0:
-				img.putpixel((x, y), (128, 128, 128, 255))
+				img.putpixel((x, y), (0, 0, 0, 255))
 	
 	# get byte image
 	imgbuf = io.BytesIO()
@@ -45,10 +45,10 @@ def get_qr():
 @app.route("/show/<token>", methods=["GET"])
 def show(token):
 	if token not in tokens:
-		return flask.render_template("ng.html")
+		return flask.render_template("closed.html")
 	
 	tokens.remove(token)
-	return flask.render_template("ok.html")
+	return flask.render_template("paper.html")
 
 if __name__ == "__main__":
 	app.run(host="0.0.0.0", port=8000, debug=False)
